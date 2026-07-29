@@ -1,0 +1,104 @@
+.index-page{
+    background-color: black;
+}
+
+.link{
+    text-align: center;
+}
+
+.image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.secondary-pages{
+    background-color: rgb(27, 27, 27);
+}
+
+.header{
+    text-align: center;
+    color: rgb(75, 216, 47);
+    font-size: 40;
+}
+
+.button{
+    height: 400px;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+#BtnReaction:active{
+    height: 440px;
+    width: 880px;
+}
+
+#btnCPS:active{
+    background-color: rgb(215, 235, 215);
+}
+
+#btnCPS:hover{
+    height: 440px;
+    width: 880px;
+}
+
+.button-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Btn2{
+    background-color: white;
+    border-radius: 8px;
+}
+
+#Btn2:active{
+    background-color: rgb(215, 235, 215);
+}
+
+.button-box2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info{
+    text-align: center;
+    color: white;
+}
+
+#pop{
+    text-align: center;
+    color: white;
+    font-size: 60;
+}
+
+.input-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+#numInput{
+    width: 200px;
+}
+
+#submitBtn{
+    background-color: white;
+}
+
+.submitBtn:active{
+    background-color: rgb(215, 235, 215);
+}
+
+.home-button{
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+}
