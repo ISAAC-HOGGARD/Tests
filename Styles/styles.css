@@ -39,6 +39,11 @@ a{
     font-size: 40;
 }
 
+button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
 .button{
     height: 400px;
     width: 800px;
