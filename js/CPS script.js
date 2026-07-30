@@ -28,13 +28,13 @@ submitBtn.addEventListener("click", function() {
 
 stopButton.addEventListener("click", function(){
     start = false;
-    console.log("Is the clicker is off");
     button.style.display = "revert";
     button.textContent = "start";
     clearInterval(intervalId);
     clearTimeout(timeoutId);
 })
 
+let best
 let clicks;
 button.addEventListener("click", function(){
     if (start === false){
@@ -42,6 +42,7 @@ button.addEventListener("click", function(){
         button.textContent = "click";
         clicks = 0;
         let startTime = Date.now();
+        console.log("The clicker is on");
         submitBtn.style.display = "none";
         numInput.style.display = "none";
         let cpsTime = document.getElementById("timeInfo");
@@ -61,6 +62,10 @@ button.addEventListener("click", function(){
             let cps = clicks/totalTime;
             cps = Number(cps.toFixed(2));
             console.log(`You got ${cps} CPS`);
+            if (cps > best || isNaN(best)){
+                best = cps;
+                console.log(`Best is ${best}`);
+            }
             submitBtn.style.display = "revert";
             numInput.style.display = "revert";
             console.log("The clicker is off");
