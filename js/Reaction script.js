@@ -6,7 +6,7 @@ let timeoutId;
 setTimeout(function() {
     let popup = document.getElementById("pop");
     popup.textContent = "";
-}, 3000);
+}, 4000);
 
 document.getElementById("Btn2").addEventListener("click", function() {
     clickable = false;
