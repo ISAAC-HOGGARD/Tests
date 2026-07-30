@@ -24,7 +24,7 @@ submitBtn.addEventListener("click", function() {
     button.style.display = "revert";
     stopButton.style.display = "revert";
     numInput.value = "";
-})
+});
 
 stopButton.addEventListener("click", function(){
     start = false;
@@ -32,10 +32,10 @@ stopButton.addEventListener("click", function(){
     button.textContent = "start";
     clearInterval(intervalId);
     clearTimeout(timeoutId);
-})
+});
 
-let best
 let clicks;
+let best = Number(localStorage.getItem("best")) || 0;
 button.addEventListener("click", function(){
     if (start === false){
         start = true;
@@ -62,15 +62,18 @@ button.addEventListener("click", function(){
             let cps = clicks/totalTime;
             cps = Number(cps.toFixed(2));
             console.log(`You got ${cps} CPS`);
-            if (cps > best || isNaN(best)){
+            let cpsDisplay = document.getElementById("cpsInfo");
+            if (cps > best){
                 best = cps;
-                console.log(`Best is ${best}`);
+                localStorage.setItem("best", best);
+                cpsDisplay.textContent = `New best CPS ${best}`;
+            } else {
+                cpsDisplay.textContent = `Your CPS was ${cps}`;
             }
+            console.log(`Best is ${best}`);
             submitBtn.style.display = "revert";
             numInput.style.display = "revert";
             console.log("The clicker is off");
-            let cpsDisplay = document.getElementById("cpsInfo");
-            cpsDisplay.textContent = `Your CPS was ${cps}`;
             cpsTime.textContent = "";
             button.style.display = "none";
         }, clickTimeMs);
@@ -78,4 +81,4 @@ button.addEventListener("click", function(){
         clicks = clicks +1;
         //console.log(clicks)
     }
-})
+});
