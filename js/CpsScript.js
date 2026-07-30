@@ -66,7 +66,7 @@ button.addEventListener("click", function(){
             if (cps > best){
                 best = cps;
                 localStorage.setItem("best", best);
-                cpsDisplay.textContent = `New best CPS ${best}`;
+                cpsDisplay.textContent = `New best CPS is ${best}`;
             } else {
                 cpsDisplay.textContent = `Your CPS was ${cps}`;
             }
