@@ -22,10 +22,15 @@ document.getElementById("Btn2").addEventListener("click", function() {
     }, randomInt * 1000);
 });
 
+let best
 button.addEventListener("click", function() {
     if (clickable === true) {
         let endTime = Date.now();
         let reactionTime = (endTime - startTime);
+        if (reactionTime < best || isNaN(best)){
+            best = reactionTime;
+            console.log(`Best is ${best}`);
+        }
         console.log(reactionTime);
         let reaction = document.getElementById("reactionInfo");
         reaction.textContent = `${reactionTime}ms`
