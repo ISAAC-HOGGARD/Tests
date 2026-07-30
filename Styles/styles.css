@@ -47,6 +47,7 @@ a{
     margin-top: 20px;
     background-color: white;
     border-radius: 8px;
+    color: black;
 }
 
 #BtnReaction:active{
@@ -72,6 +73,7 @@ a{
 #Btn2{
     background-color: white;
     border-radius: 8px;
+    color: black;
 }
 
 #Btn2:active{
@@ -109,6 +111,7 @@ a{
 
 #submitBtn{
     background-color: white;
+    color: black;
 }
 
 .submitBtn:active{
