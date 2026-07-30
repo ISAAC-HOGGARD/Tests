@@ -6,6 +6,10 @@
     text-align: center;
 }
 
+a{
+    color: rgb(75, 216, 47);
+}
+
 .image{
     display: flex;
     justify-content: center;
