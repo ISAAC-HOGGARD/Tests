@@ -22,18 +22,21 @@ document.getElementById("Btn2").addEventListener("click", function() {
     }, randomInt * 1000);
 });
 
-let best
+let best = Number(localStorage.getItem("best")) || Infinity;
 button.addEventListener("click", function() {
     if (clickable === true) {
         let endTime = Date.now();
         let reactionTime = (endTime - startTime);
-        if (reactionTime < best || isNaN(best)){
-            best = reactionTime;
-            console.log(`Best is ${best}`);
-        }
-        console.log(reactionTime);
         let reaction = document.getElementById("reactionInfo");
-        reaction.textContent = `${reactionTime}ms`
+        if (reactionTime < best){
+            best = reactionTime;
+            localStorage.setItem("best", best);
+            reaction.textContent = `New best ${best}ms`;
+        } else {
+            reaction.textContent = `${reactionTime}ms`;
+        }
+        console.log(`Best is ${best}`);
+        console.log(reactionTime);
         clickable = false;
         button.style.backgroundColor = "white";
     } else {
