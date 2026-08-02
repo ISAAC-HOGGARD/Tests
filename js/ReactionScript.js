@@ -6,18 +6,20 @@ let timeoutId;
 setTimeout(function() {
     let popup = document.getElementById("pop");
     popup.textContent = "";
-}, 4000);
+}, 2000);
 
 document.getElementById("Btn2").addEventListener("click", function() {
     clickable = false;
     console.log(`Clickable - ${clickable}`);
-    button.style.backgroundColor = "Red";
+    button.style.backgroundColor = "red";
+    button.textContent = "Wait";
     let randomInt = Math.random() + 2;
 
     timeoutId = setTimeout(function() {
         clickable = true;
         console.log(`Clickable - ${clickable}`);
         button.style.backgroundColor = "Green";
+        button.textContent = "Click";   
         startTime = Date.now();
     }, randomInt * 1000);
 });
@@ -39,8 +41,13 @@ button.addEventListener("click", function() {
         console.log(reactionTime);
         clickable = false;
         button.style.backgroundColor = "white";
+        button.textContent = "Click Start";
     } else {
-        alert("Click the button when it's green");
+        if (button.style.backgroundColor === "red"){
+            alert("Click the button when it's green");
+        } else{
+            alert("Click start")
+        }
         button.style.backgroundColor = "white";
         clearTimeout(timeoutId);
     }
