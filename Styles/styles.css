@@ -1,26 +1,40 @@
 html { 
     touch-action: manipulation;
     -webkit-touch-callout: none;
+
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
 }
 
-.index-page{
-    background-color: black;
-}
-
-.link{
-    text-align: center;
+button {
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 a{
     color: rgb(75, 216, 47);
     text-decoration: none;
+
     background: fixed;
     background-color: rgb(255, 255, 255);
+
     border-radius: 5px;
+}
+
+.index-page{
+    background-color: black;
+}
+
+.header{
+    text-align: center;
+    color: rgb(75, 216, 47);
+    font-size: 40;
+}
+
+.link{
+    text-align: center;
 }
 
 .image{
@@ -33,40 +47,22 @@ a{
     background-color: rgb(27, 27, 27);
 }
 
-.header{
-    text-align: center;
-    color: rgb(75, 216, 47);
-    font-size: 40;
+.button-box2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-button {
-  -webkit-appearance: none;
-  appearance: none;
-}
-
-.button{
-    height: 400px;
-    width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
+#Btn2{
     background-color: white;
+
     border-radius: 8px;
+
     color: black;
 }
 
-#BtnReaction:active{
-    height: 440px;
-    width: 880px;
-}
-
-#btnCPS:active{
+#Btn2:active{
     background-color: rgb(215, 235, 215);
-}
-
-#btnCPS:hover{
-    height: 440px;
-    width: 880px;
 }
 
 .button-box{
@@ -75,47 +71,47 @@ button {
     align-items: center;
 }
 
-#Btn2{
+.button{
+    height: 400px;
+    width: 800px;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+
     background-color: white;
+
     border-radius: 8px;
+
     color: black;
 }
 
-#Btn2:active{
+#btnCPS:hover{
+    height: 440px;
+    width: 880px;
+}
+
+#btnCPS:active{
     background-color: rgb(215, 235, 215);
-}
-
-.button-box2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.info{
-    text-align: center;
-    color: white;
-}
-
-#pop{
-    text-align: center;
-    color: white;
-    font-size: 60;
 }
 
 .input-box{
     display: flex;
     justify-content: center;
     align-items: center;
+
     padding-top: 20px;
 }
 
 #numInput{
     width: 200px;
+
     font-size: 16px;
 }
 
 #submitBtn{
     background-color: white;
+
     color: black;
 }
 
@@ -126,5 +122,22 @@ button {
 .home-button{
     text-align: center;
     color: white;
+
     margin-top: 20px;
+}
+
+#pop{
+    text-align: center;
+    color: white;
+    font-size: 60;
+}
+
+.info{
+    text-align: center;
+    color: white;
+}
+
+#BtnReaction:active{
+    height: 440px;
+    width: 880px;
 }
