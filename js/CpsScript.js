@@ -2,6 +2,7 @@ let button = document.getElementById("btnCPS");
 let stopButton = document.getElementById("Btn2");
 let numInput = document.getElementById("numInput");
 let submitBtn = document.getElementById("submitBtn");
+let cpsTime = document.getElementById("timeInfo");
 let start = false;
 let clickTimeMs;
 let clickTimeS;
@@ -30,7 +31,11 @@ submitBtn.addEventListener("click", function() {
 stopButton.addEventListener("click", function(){
     start = false;
     button.style.display = "revert";
+    cpsTime.textContent = "";
     button.textContent = "start";
+    stopButton.textContent = "Restart";
+    submitBtn.style.display = "revert";
+    numInput.style.display = "revert";
     clearInterval(intervalId);
     clearTimeout(timeoutId);
 });
@@ -40,13 +45,13 @@ let best = Number(localStorage.getItem("best")) || 0;
 button.addEventListener("click", function(){
     if (start === false){
         start = true;
+        stopButton.textContent = "Stop";
         button.textContent = "click";
         clicks = 0;
         let startTime = Date.now();
         console.log("The clicker is on");
         submitBtn.style.display = "none";
         numInput.style.display = "none";
-        let cpsTime = document.getElementById("timeInfo");
         cpsTime.textContent = `Time left: ${clickTimeS}`;
 
         intervalId = setInterval(function() {
@@ -75,6 +80,7 @@ button.addEventListener("click", function(){
             submitBtn.style.display = "revert";
             numInput.style.display = "revert";
             console.log("The clicker is off");
+            stopButton.textContent = "Restart";
             cpsTime.textContent = "";
             button.style.display = "none";
         }, clickTimeMs);
