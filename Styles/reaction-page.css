@@ -1,0 +1,10 @@
+#pop{
+    text-align: center;
+    color: white;
+    font-size: 60;
+}
+
+#BtnReaction:active{
+    height: 440px;
+    width: 880px;
+}
