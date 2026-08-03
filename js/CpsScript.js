@@ -45,13 +45,13 @@ let best = Number(localStorage.getItem("best")) || 0;
 button.addEventListener("click", function(){
     if (start === false){
         start = true;
-        stopButton.textContent = "Stop";
-        button.textContent = "click";
         clicks = 0;
         let startTime = Date.now();
-        console.log("The clicker is on");
+        stopButton.textContent = "Stop";
+        button.textContent = "click";
         submitBtn.style.display = "none";
         numInput.style.display = "none";
+        console.log("The clicker is on");
         cpsTime.textContent = `Time left: ${clickTimeS}`;
 
         intervalId = setInterval(function() {
@@ -79,10 +79,10 @@ button.addEventListener("click", function(){
             console.log(`Best is ${best}`);
             submitBtn.style.display = "revert";
             numInput.style.display = "revert";
-            console.log("The clicker is off");
+            button.style.display = "none";
             stopButton.textContent = "Restart";
             cpsTime.textContent = "";
-            button.style.display = "none";
+            console.log("The clicker is off");
         }, clickTimeMs);
     } else {
         clicks = clicks +1;
