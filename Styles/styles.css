@@ -23,10 +23,6 @@ a{
     border-radius: 5px;
 }
 
-.index-page{
-    background-color: black;
-}
-
 .header{
     text-align: center;
     color: rgb(75, 216, 47);
@@ -37,32 +33,8 @@ a{
     text-align: center;
 }
 
-.image{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .secondary-pages{
     background-color: rgb(27, 27, 27);
-}
-
-.button-box2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#Btn2{
-    background-color: white;
-
-    border-radius: 8px;
-
-    color: black;
-}
-
-#Btn2:active{
-    background-color: rgb(215, 235, 215);
 }
 
 .button-box{
@@ -86,39 +58,6 @@ a{
     color: black;
 }
 
-#btnCPS:hover{
-    height: 440px;
-    width: 880px;
-}
-
-#btnCPS:active{
-    background-color: rgb(215, 235, 215);
-}
-
-.input-box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    padding-top: 20px;
-}
-
-#numInput{
-    width: 200px;
-
-    font-size: 16px;
-}
-
-#submitBtn{
-    background-color: white;
-
-    color: black;
-}
-
-.submitBtn:active{
-    background-color: rgb(215, 235, 215);
-}
-
 .home-button{
     text-align: center;
     color: white;
@@ -126,18 +65,7 @@ a{
     margin-top: 20px;
 }
 
-#pop{
-    text-align: center;
-    color: white;
-    font-size: 60;
-}
-
 .info{
     text-align: center;
     color: white;
-}
-
-#BtnReaction:active{
-    height: 440px;
-    width: 880px;
 }
