@@ -8,22 +8,6 @@ setTimeout(function() {
     popup.textContent = "";
 }, 2000);
 
-document.getElementById("Btn2").addEventListener("click", function() {
-    clickable = false;
-    console.log(`Clickable - ${clickable}`);
-    button.style.backgroundColor = "red";
-    button.textContent = "Wait";
-    let randomInt = Math.random() + 2;
-
-    timeoutId = setTimeout(function() {
-        clickable = true;
-        console.log(`Clickable - ${clickable}`);
-        button.style.backgroundColor = "Green";
-        button.textContent = "Click";   
-        startTime = Date.now();
-    }, randomInt * 1000);
-});
-
 let best = Number(localStorage.getItem("best")) || Infinity;
 button.addEventListener("click", function() {
     if (clickable === true) {
@@ -41,14 +25,27 @@ button.addEventListener("click", function() {
         console.log(reactionTime);
         clickable = false;
         button.style.backgroundColor = "white";
-        button.textContent = "Click Start";
+        button.textContent = "Click to start";
     } else {
         if (button.style.backgroundColor === "red"){
             alert("Click the button when it's green");
+            button.style.backgroundColor = "white";
+            button.textContent = "Click to start";
+            clearTimeout(timeoutId);
         } else{
-            alert("Click start")
+            clickable = false;
+            console.log(`Clickable - ${clickable}`);
+            button.style.backgroundColor = "red";
+            button.textContent = "Wait";
+            let randomInt = Math.random() + 2;
+
+            timeoutId = setTimeout(function() {
+                clickable = true;
+                console.log(`Clickable - ${clickable}`);
+                button.style.backgroundColor = "Green";
+                button.textContent = "Click";   
+                startTime = Date.now();
+            }, randomInt * 1000);
         }
-        button.style.backgroundColor = "white";
-        clearTimeout(timeoutId);
     }
 });
