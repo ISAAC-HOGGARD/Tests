@@ -21,7 +21,7 @@ submitBtn.addEventListener("click", function() {
     clickTimeMs = (Number(numInput.value)) * 1000;
     clickTimeS = Number(numInput.value);
     console.log(`Click time is ${clickTimeS}`);
-    numInput.placeholder = "Chnage duration"; //here
+    numInput.placeholder = "Change duration";
     button.style.display = "revert";
     stopButton.style.display = "revert";
     numInput.value = "";
